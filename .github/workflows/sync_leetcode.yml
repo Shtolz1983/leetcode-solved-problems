@@ -8,12 +8,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    
 
     steps:
       - name: Sync
         uses: joshcai/leetcode-sync@v1.5
         with:
           github-token: ${{ github.token }}
-          leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
-          leetcode-session: ${{ secrets.LEETCODE_SESSION }}
-          destination-folder: my-folder
+          leetcode-csrf-token: ${{ secrets.w2gv3XeHInjmyaSGm2bgz0FUPF5m0t6LLyY84ahf0CBUeUBOBGcxlMCsUN9gaNRB }}
+          leetcode-session: ${{ secrets.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9 }}
+          destination-folder: ''
